@@ -1,0 +1,249 @@
+@mixin social_media_sprite($x,$y)
+{
+  width: 36px;
+  height: 36px;
+  background: url(../images/img-sprite.png)no-repeat $x $y;
+  float: left;
+  vertical-align: middle;
+}
+@mixin summary( $x, $y )
+{
+  width: 94px;
+  height: 94px;
+  background: url(../images/img-sprite.png)no-repeat $x $y;
+  display: inline-block;
+  vertical-align: middle;
+}
+@mixin footer_sprite($x, $y)
+{
+  width: 168px;
+  height: 170px;
+  background: url(../images/product_footer_sprite.png)no-repeat $x $y;
+  display: inline-block;
+}
+
+@mixin product_sprite($x, $y)
+{
+  width: 74px;
+  height: 76px;
+  background: url(../images/img-sprite.png)no-repeat $x $y;
+  float: left;
+  vertical-align: middle;
+}
+
+.header-top
+{
+  background-color: #000000;
+}
+.head-nav
+{
+  width: 90%;
+}
+.cl-effect-3 a::after
+{
+  top: 100%;
+  background-color: #49c3e4;
+}
+.head-nav ul li a
+{
+  padding: 0.5em 0.1em 0.1em;
+  margin: auto auto 1em;
+}
+.head-nav ul li.active a
+{
+  border: 2px solid;
+  border-radius: 5px;
+}
+.our .intro
+{
+  font-size: 1.6em;
+}
+
+
+.header-top
+{
+  i.tw {
+    @include social_media_sprite(-403px,-12px);
+
+    &:hover{
+      background: url(../images/img-sprite.png) no-repeat -403px -49px;
+    }
+  }
+  i.fb {
+    @include social_media_sprite(-442px,-12px);
+
+    &:hover{
+      background: url(../images/img-sprite.png) no-repeat -442px -49px;
+    }
+  }
+  i.in {
+    @include social_media_sprite(-478px,-12px);
+
+    &:hover{
+      background: url(../images/img-sprite.png) no-repeat -478px -49px;
+    }
+  }
+  i.rss {
+    @include social_media_sprite(-515px, -49px);
+
+    &:hover{
+      background: url(../images/img-sprite.png) no-repeat -515px -12px;
+    }
+  }
+
+}
+.our
+{
+  h2
+  {
+    color: #0098cb;
+  }
+  div.our-left
+  {
+    padding: 0 35px;
+    width: 30.33333%;
+    margin: 0 1%;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+
+  }
+  .vision i { @include summary(-97px, 1px);  }
+
+  .policy i
+  {    @include summary(0px, 0px);  }
+  .product i { @include summary(-403px, -89px);  }
+}
+
+.recnt
+{
+  i.self-con {    @include product_sprite(0,-96px);  }
+  i.one-bed {    @include product_sprite(-79px,-96px);  }
+  i.two-bed {    @include product_sprite(-163px,-96px);  }
+  i.two-bed-semi {    @include product_sprite(-323px,-96px);  }
+  i.three-bed-semi {    @include product_sprite(-243px,-96px);  }
+}
+.footer-top
+{
+  color: #fff;
+  ul.partners li
+  {
+    list-style-type: disc;
+    display: list-item;
+  }
+  .product1
+  { @include footer_sprite(0, 0); }
+  .product2
+  {    @include footer_sprite(-177px, 0);  }
+  .product3
+  {    @include footer_sprite(-350px, 0);  }
+  .product4
+  {    @include footer_sprite(-523px, 0);  }
+  i.text-center
+  {
+    @include summary(-298px,0);
+    margin: 0 0 0 134px;
+  }
+
+
+}
+
+/******************************************** SUB PAGE ****************************************/
+.main
+{
+  padding: 2em 1em;
+  color: #606060;
+  font-size: 15px;
+  line-height: 25px;
+  text-align: justify;
+
+  h2, h3{
+    color: #00AEEF;
+    font-size: 24px;
+    margin: 10px 0 auto 0;
+  }
+  h2{
+    color: #ff5a00;
+    margin: 30px 0 10px 0;
+  }
+  .left-content, .right-content
+  {
+    background: #fbfbfb;
+    padding: 2em;
+  }
+  .left-content
+  {
+  }
+  .right-content
+  {
+    width: 31.3333%;
+    margin: 0 0 0 1.5%;
+  }
+
+  .price{
+    margin-left: 30px;
+    font-weight: 600;
+  }
+}
+
+.head-left {
+  input{
+    background: #000;
+    color: #fff;
+    border: none;
+    border-bottom: 1px solid #555555;
+    margin: 0 3px;
+    font-style: italic;
+    border-radius: 5px;
+    padding: 5px 20px;
+  }
+  button{
+    background: #7594e6;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 20px;
+
+    &:hover{
+      background: #3f517d;
+    }
+  }
+}
+.header-bottom {
+  background: #fbfbff;
+  .head-nav {
+    margin-left: 12%;
+    ul li a {
+      color: #2c2c2c;
+    }
+  }
+}
+.team
+{
+  .moreDtl{
+    cursor: pointer;
+    display: inline-block;
+    padding: 5px;
+    background: #42a1c8;
+    color: #fff;
+    font-weight: 600;
+    margin: 5px 0 0 600px;
+    box-shadow: 2px 2px 5px rgba(31, 31, 31, 0.5);
+    border-radius: 3px;
+  }
+}
+.other-team
+{
+  li span
+  {
+    font-weight:bold;
+  }
+}
+.air
+{
+  li.product-land-space, li.product-amount
+  {
+    float: right;
+    display: inline-block;
+    font-weight: bold;
+    margin: 30px 20px;
+  }
+}
